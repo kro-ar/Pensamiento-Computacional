@@ -1,90 +1,48 @@
-#S2: Sentencias Basicas - Ejercicios
-#Intentá ser lo más amigable posible con el usuario!
+#S3 Estructuras de Control
 
-#Ejercicio 1
-#Crear un programa que le solicite al usuario un entero y lo imprima por pantalla.
 
-numero = input('Ingrese un numero del 1 al 4:')
-print ('Eligio el numero:' + numero)
+#Valores numericos
+#Aritmeticos + - * / // 
+num1= 2
+num2=3
+resultado = num1 + num2
 
-#Ejercicio 2
-#Crear un programa que le solicite al usuario dos números enteros y luego imprima por pantalla:
+#Valores booleanos es decir TRUE o FALSE
+#El conjunto de Operaciones se unifican con
+#Operadores Logicos and or not 
 
-num1 = int(input('Ingrese un numero:'))
-num2 = int(input('Ingrese otro numero:'))
-suma = num1 + num2
-resta = num1 - num2
-multiplicacion = num1 * num2
-division = num1 / num2
-resultado = suma,resta,multiplicacion,division
-print(resultado)
+#Que devuelven una EXPRESION en las que se usan
+#Operadores Relacionales == != < > => 
 
-#Ejercicio 3
-#Crear un programa que le solicite al usuario un entero y determine si es par
-#Mostrando por pantalla un mensaje que indique el resultado
+numero_1 = 12
+numero_2 = 45
+numero_3 = 4
+numero_4 = 76
+numero_5 = 34
 
-numero = int(input("Ingresa un número entero: "))
-resultado = "par" if numero % 2 == 0 else "impar"
-print(f"El número {numero} es {resultado}.")
+#exp1)
+#(numero_1 > numero_3) True
 
-#Ejecicio 4
-#Escribir un programa que le pida a un usuario su año de nacimiento y otro año
-#Y le diga qué edad tenía el usuario en el año ingresado.
+#exp2
+#(numero_2 == numero_1) False
 
-anioNac = int(input("Ingrese su año de nacimiento:"))
-anioExt = int(input("Ingrese otro año:"))
-edad = anioExt - anioNac
-print("En el año", anioExt , "tenia la edad de ", edad)
+#exp3
+#(numero_2 < numero_4) and (numero_3 == numero_5) False
 
-#Ejercio 5
-#Crear un programa que le solicite al usuario 5 enteros
-#Y muestre por pantalla el promedio de ellos
+#exp4
+#(numero_1 + numero_5 == numero_2) or (numero_3 >= numero_4) False
 
-nums1 = int(input("Ingrese un numeros entero:"))
-nums2 = int(input("Ingrese un numeros entero:"))
-nums3 = int(input("Ingrese un numeros entero:"))
-nums4 = int(input("Ingrese un numeros entero:"))
-nums5 = int(input("Ingrese un numeros entero:"))
-resultado = (nums1 + nums2 + nums3 + nums4 + nums5) / 5
-print(resultado)
+#Estructuras de Control Selectivas
+ #if (si ) /elif (si sino ) / else (sino)
+#Entonces se toma como :
 
-#Ejercio 6
-#Crear una función que reciba un número 
-#Y muestre el anterior y el siguiente.
-
-numIng = input("Ingrese un numero:")
-numAnt = int(numIng)-1
-numSig = int(numIng)+1
-print("El numero ingresado es", numIng, "el numero anterior es", numAnt , "y el numero siguiente es ", numSig)
-
-#Ejercio 7
-#Crear una función que una un string y un entero, ambos dentro de un string
-
-nombre = input("Ingrese su nombre:")
-edad = int(input("Ingrese su edad:"))
-print(f"Hola", {nombre},"tienes",{edad})
-
-#Ejercio 8 
-#Pedirle nombre y apellido por separado e imprimir “Apellido, Nombre”
-
-nomb = input("Ingrese su nombre:")
-apell = input("Ingrese su apellido:")
-print("Su nombre completo es:", nomb ,"", apell)
-
-#Ejecicio 9 
-#Obtener una palabra e imprimir la cantidad de letras
-palabra = input("Ingrese una palabra:")
-cantPal = len(palabra)
-print("Su palabra contiene",cantPal, "caracteres")
-
-#Ejercicio 10
-#Obtener una palabra e imprimir los primeros 5 caracteres
-
-palabra = input("Ingrese una palabra:")
-print(palabra[:5:])
-
-#Ejercicio 11
-#Obtener una palabra, borrarle todas las ‘a’ e imprimirla por pantalla
-palabra = input("Ingrese una palabra que contenga la letra a:")
-palabra_sin_a = palabra.replace('a', '').replace('A', '')
-print(palabra_sin_a)
+lluvia = False
+calor = True
+if lluvia and calor :
+ print("Llevar sombrilla y poca ropa")
+elif lluvia and not calor:
+  print ("Llevar sombrilla y abrigo")
+elif calor and not lluvia:
+  print ("No llevar sombrilla ni abrigo")
+else:
+  print ("No llevar sombrilla pero abrigarse")
